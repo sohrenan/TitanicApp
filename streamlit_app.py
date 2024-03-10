@@ -2,12 +2,17 @@ import streamlit as st
 import requests
 from PIL import Image
 import pickle
+import os
 
-with open('log.sav', 'rb') as file:
+current_dir = os.path.dirname(__file__)
+
+log_model_path = os.path.join(current_dir, 'log.sav')
+with open(log_model_path, 'rb') as file:
     log_model = pickle.load(file)
 
 # Load the image
-image = Image.open("leo.jpg")
+image_path = os.path.join(current_dir, 'leo.jpg')
+image = Image.open(image_path)
 
 def main():
     st.image(image, width=800)  # Display the image as a small icon
