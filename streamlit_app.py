@@ -5,7 +5,7 @@ import pickle
 
 
 
-with open('TitanicApp/lov.sav', 'rb') as file:
+with open('TitanicApp/log.sav', 'rb') as file:
     log_model = pickle.load(file)
 
 image = Image.open('TitanicApp/leo.jpg')
