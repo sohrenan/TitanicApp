@@ -5,10 +5,10 @@ import pickle
 import sklearn
 
 
-with open('/mount/src/titanicapp/log.sav', 'rb') as file:
+with open('log.sav', 'rb') as file:
     log_model = pickle.load(file)
 
-image = Image.open('/mount/src/titanicapp/leo.jpg')
+image = Image.open('leo.jpg')
 
 def main():
     st.image(image, width=800)  # Display the image as a small icon
