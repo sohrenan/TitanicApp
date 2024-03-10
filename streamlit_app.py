@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 from PIL import Image
 import pickle
-
+from sklearn.linear_model import LogisticRegression
 
 
 with open('/mount/src/titanicapp/log.sav', 'rb') as file:
